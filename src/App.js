@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter,  Routes, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Inicio from './components/Inicio'
+import Blog from './components/Blog'
+import AcercaDe from './components/AcercaDe'
+import styled from 'styled-components'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <ContenedorPrincipal>
+        <Header />
+        <Main>
+
+          <Routes>
+            <Route path='/' element={<Inicio/>} />
+
+            <Route path='blog' element={<Blog/>} />
+
+            <Route path='acerca-de' element={<AcercaDe/>} />
+          </Routes>
+        </Main>
+      </ContenedorPrincipal>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+const ContenedorPrincipal = styled.div`
+padding: 20px;
+width: 90%;
+max-width: 1200px;  
+`;
+
+const Main = styled.main`
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(129,129,129,0.5);
+`;
+
+
+
+export default App
