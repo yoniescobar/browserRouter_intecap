@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Header = () => {
   return (
     <ContenedorHeader>
-      <Titulo>Blog de Lenguajes de Programación</Titulo>
+      <Titulo>Los 15 Lenguajes de Programacion Mejor Pagados</Titulo>
       <Menu>
         <NavLink to='/'> Inicio</NavLink>
         <NavLink to='/blog'> Blog</NavLink>
