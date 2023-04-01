@@ -5,8 +5,8 @@ import styled from 'styled-components'
 const Header = () => {
   return (
     <ContenedorHeader>
-      <Titulo>Los 15 Lenguajes de Programacion Mejor Pagados</Titulo>
-      <p>Programacion: es el arte de crear, diseñar y desarrollar algoritmos computacionales</p>
+      <Titulo>Los 15 Lenguajes de Programacion Mejor Pagados</Titulo><br/><br/>
+    
       <Menu>
         <NavLink to='/'> Inicio</NavLink>
         <NavLink to='/blog'> Blog</NavLink>
@@ -31,18 +31,22 @@ color: #FF0000;
 
 const Menu = styled.nav`
 a {
+  display: inline-block;
+  background-color: #199319;
+  color: white;
+  padding: 15px 25px;
   text-decoration: none;
-  color: #165168;
-  margin: 0 10px;
+  margin: 0 20px;
+  border-radius: 10px;
   
 }
 a:hover{
-  color: #165168;
-  background-color: yellow;
+  background-color: #223094;
 }
 a:active{
     border-bottom: 2px solid #165168;
     padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
 `
 
