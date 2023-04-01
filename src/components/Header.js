@@ -6,6 +6,7 @@ const Header = () => {
   return (
     <ContenedorHeader>
       <Titulo>Los 15 Lenguajes de Programacion Mejor Pagados</Titulo>
+      <p>Programacion: es el arte de crear, diseñar y desarrollar algoritmos computacionales</p>
       <Menu>
         <NavLink to='/'> Inicio</NavLink>
         <NavLink to='/blog'> Blog</NavLink>
