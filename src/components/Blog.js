@@ -3,7 +3,7 @@ import posts from './../data/posts'
 import { NavLink } from 'react-router-dom'
 
 const Blog = () => {
-    console.log(posts)
+
     return (
         <div>
             <h3>Página de Blog</h3>

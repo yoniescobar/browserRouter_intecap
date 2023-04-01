@@ -5,6 +5,8 @@ import Inicio from './components/Inicio'
 import Blog from './components/Blog'
 import AcercaDe from './components/AcercaDe'
 import styled from 'styled-components'
+import Post from './components/Post'
+import Error404 from './components/Error404'
 
 const App = () => {
   return (
@@ -12,13 +14,12 @@ const App = () => {
       <ContenedorPrincipal>
         <Header />
         <Main>
-
           <Routes>
+            <Route path='*' element={<Error404/>} />
             <Route path='/' element={<Inicio/>} />
-
-            <Route path='blog' element={<Blog/>} />
-
-            <Route path='acerca-de' element={<AcercaDe/>} />
+            <Route path='/blog' element={<Blog/>} />
+            <Route path='/blog/:id' element={<Post/>} />
+            <Route path='/acerca-de' element={<AcercaDe/>} />
           </Routes>
         </Main>
       </ContenedorPrincipal>
